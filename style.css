@@ -32,3 +32,24 @@ h1 {
     color: #f5e642;
     font-size: 1.5rem;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 20px;
+    padding: 24px;
+    max-width: 700px;
+    margin: 40px auto;  
+
+}
+
+.item {
+    aspect-ratio: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+border: 2px solid #e8e8e0;
+color: #e8e8e0;
+text-decoration: none;
+}
