@@ -53,3 +53,8 @@ border: 2px solid #e8e8e0;
 color: #e8e8e0;
 text-decoration: none;
 }
+.item.selected {
+  border-color: #f5e642;
+  color: #f5e642;
+  box-shadow: 0 0 20px rgba(245, 230, 66, 0.6);
+}
