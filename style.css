@@ -5,3 +5,30 @@ body {
   color: #b7a9a9;
   font-family: sans-serif;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+h1, h2 p {
+    margin:0;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.header-left p {
+    font-size: 0.9rem;
+}
+
+.header-right h2 {
+    font-size: 0.9rem;
+}
+
+.header-right h2 {
+    color: #f5e642;
+    font-size: 1.5rem;
+}
