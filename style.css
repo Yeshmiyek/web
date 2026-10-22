@@ -77,3 +77,26 @@ transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
 @media (prefers-reduced-motion: reduce) {
   .item.selected { animation: none; box-shadow: 0 0 20px rgba(245, 230, 66, 0.6); }
 }
+
+.controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+}
+.controls button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.sym { margin-right: 4px; }
+.sym.x { color: #8c9cff; }
+.sym.o { color: #ff7a7a; }
+.sym.t { color: #6fe39a; }

@@ -10,3 +10,16 @@ items.forEach(item => {
     }
   });
 });
+const btnEnter = document.getElementById('btn-enter');
+const btnBack = document.getElementById('btn-back');
+
+btnEnter.addEventListener('click', () => {
+  const selected = document.querySelector('.item.selected');
+  if (selected && selected.getAttribute('href') !== '#') {
+    window.location.href = selected.href;
+  }
+});
+
+btnBack.addEventListener('click', () => {
+  items.forEach(i => i.classList.remove('selected'));
+});
