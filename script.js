@@ -6,25 +6,17 @@ items.forEach(item => {
       event.preventDefault();
       items.forEach(i => i.classList.remove('selected'));
       item.classList.add('selected');
-    
     }
   });
 });
-const btnEnter = document.getElementById('btn-enter');
-const btnBack = document.getElementById('btn-back');
 
-btnEnter.addEventListener('click', () => {
-  const selected = document.querySelector('.item.selected');
-  if (selected && selected.getAttribute('href') !== '#') {
-    window.location.href = selected.href;
-  }
-});
+const noise = document.getElementById('boil-noise');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-btnBack.addEventListener('click', () => {
-  const backUrl = document.body.dataset.back;
-  if (backUrl) {
-    window.location.href = backUrl;
-  } else {
-    items.forEach(i => i.classList.remove('selected'));
-  }
-});
+if (noise && !reduceMotion) {
+  let seed = 1;
+  setInterval(() => {
+    seed = (seed % 4) + 1;
+    noise.setAttribute('seed', seed);
+  }, 110);
+}
