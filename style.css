@@ -39,7 +39,7 @@ h1 {
     gap: 20px;
     padding: 24px;
     max-width: 700px;
-    margin: 40px auto;  
+    margin: 40px auto 110px;
 
 }
 
@@ -78,25 +78,36 @@ transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
   .item.selected { animation: none; box-shadow: 0 0 20px rgba(245, 230, 66, 0.6); }
 }
 
-.controls {
+.bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  text-align: center;
+  background: linear-gradient(to top, rgba(26, 26, 23, 0.9), rgba(26, 26, 23, 0));
+}
+
+.bar-links {
   display: flex;
   justify-content: center;
-  gap: 28px;
-  padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+  gap: 24px;
+  margin-bottom: 6px;
 }
-.controls button {
-  background: none;
-  border: none;
-  color: inherit;
-  font-size: inherit;
-  padding: 8px 16px;
-  cursor: pointer;
+
+.bar-links a {
+  color: #e8e8e0;
+  text-decoration: none;
+  padding: 8px 4px;
 }
-.sym { margin-right: 4px; }
-.sym.x { color: #8c9cff; }
-.sym.o { color: #ff7a7a; }
-.sym.t { color: #6fe39a; }
+
+.bar-links a:hover,
+.bar-links a:active {
+  color: #f5e642;
+}
+
+.bar small {
+  color: #e8e8e0;
+  opacity: 0.5;
+  font-size: 0.7rem;
+}

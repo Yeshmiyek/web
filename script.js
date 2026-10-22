@@ -21,5 +21,10 @@ btnEnter.addEventListener('click', () => {
 });
 
 btnBack.addEventListener('click', () => {
-  items.forEach(i => i.classList.remove('selected'));
+  const backUrl = document.body.dataset.back;
+  if (backUrl) {
+    window.location.href = backUrl;
+  } else {
+    items.forEach(i => i.classList.remove('selected'));
+  }
 });
