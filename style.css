@@ -8,12 +8,13 @@ body {
   --yellow: #f5e642;
   --pink: #d28ae8;
   --orange: #d9532e;
+  --font: 'IBM Plex Mono', ui-monospace, monospace;
 }
   margin: 0;
   min-height: 100vh;
   background: radial-gradient(circle at 50% 40%, #111a7a6a 0%, #3a5a33 70%, #1a1a17 100%);
   color: #b6b1b1;
-  font-family: sans-serif;
+  font-family: var(--font);
 }
 header {
   display: flex;
