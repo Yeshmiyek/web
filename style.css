@@ -145,7 +145,6 @@ h1 {
   opacity: 0.5;
   font-size: 0.7rem;
 }
-
 .pack {
   max-width: 520px;
   margin: 24px auto 140px;
@@ -176,22 +175,4 @@ h1 {
 
 .lower-third p:last-child {
   color: var(--yellow);
-}
-
-audio {
-  width: 100%;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border: 2px solid var(--yellow);
-  color: var(--yellow);
-  text-decoration: none;
-}
-
-.btn:hover,
-.btn:active {
-  background: var(--yellow);
-  color: #000;
 }
