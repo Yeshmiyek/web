@@ -146,12 +146,115 @@ h1 {
   font-size: 0.7rem;
 }
 .pack {
-  max-width: 520px;
+  max-width: 900px;
   margin: 24px auto 140px;
   padding: 0 24px;
   display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 760px) {
+  .pack {
+    grid-template-columns: 320px 1fr;
+    align-items: start;
+  }
+}
+
+.pack-info {
+  display: grid;
   gap: 20px;
   justify-items: start;
+}
+
+/* ventana de menu */
+.panel {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+background: linear-gradient(180deg, rgba(78, 80, 74, 0.82), rgba(30, 31, 28, 0.4));  box-shadow: 3px 3px 0 #000;
+  overflow: hidden;
+}
+
+.panel-title {
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.tracklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.track button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.2em 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 14px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.track button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.track.selected button {
+  color: var(--yellow);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* reproductor */
+.player {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.player button {
+  background: none;
+  border: 2px solid var(--text);
+  color: var(--text);
+  font: inherit;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.player button:hover,
+.player button:active {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.progress {
+  flex: 1 1 120px;
+  height: 8px;
+  border: 1px solid var(--text);
+}
+
+.progress-fill {
+  width: 30%;
+  height: 100%;
+  background: var(--yellow);
+}
+
+.time-display {
+  font-size: 0.8rem;
 }
 
 .cover {
@@ -175,4 +278,26 @@ h1 {
 
 .lower-third p:last-child {
   color: var(--yellow);
+}
+.glass-test {
+  padding: 16px 20px;
+  border-radius: 20px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px) saturate(1.4);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.plastic-test {
+  padding: 16px 20px;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(160deg, rgba(160, 200, 255, 0.55), rgba(90, 130, 220, 0.35));
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -6px 12px rgba(0, 0, 40, 0.25),
+    3px 3px 0 #000;
 }
