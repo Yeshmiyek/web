@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>free loops</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-    <header>
- <div class="header-left">
-<h1>free</h1>
-<p>3 files</p>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="boil" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence id="boil-noise" type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="1" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
 
- </div>
- <div class="header-right">
-     <img class="logo" src="images/yellow-logo.png" alt="yeshmiyek">
- </div>
-    </header>
-    
-    <main class="grid">
-          <a href="#" class="item">free 01</a>
-  <a href="#" class="item">free 02</a>
-  <a href="#" class="item">free 03</a>
+  <header>
+    <div class="header-left">
+    </div>
+    <div class="header-right">
+      <img class="logo" src="images/yellow-logo.png" alt="yeshmiyek">
+    </div>
+  </header>
 
-    </main>
+  <main class="free">
+  <ul class="loop-list" id="loop-list"></ul>
+  <p class="free-note">free for non-commercial use. commercial use needs a license.</p>
+</main>
 
-    
-<script src="script.js"></script>
+  <footer class="bar">
+    <div class="bar-links">
+      <a href="index.html">← Back</a>
+      <a href="#">Licenses</a>
+      <a href="#">Contact</a>
+    </div>
+    <small>© 2026 yeshmiyek — all rights reserved</small>
+  </footer>
 
-<footer class="bar">
-  <div class="bar-links">
-    <a href="index.html">← Back</a>
-    <a href="#">Licenses</a>
-    <a href="#">Contact</a>
-  </div>
-  <small>© 2026 yeshmiyek — all rights reserved</small>
-</footer>
-
+  <script src="script.js"></script>
+  <script src="catalog.js"></script>
+  <script src="loops.js"></script>
 </body>
 </html>

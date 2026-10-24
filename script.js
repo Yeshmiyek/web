@@ -19,4 +19,5 @@ if (noise && !reduceMotion) {
     seed = (seed % 4) + 1;
     noise.setAttribute('seed', seed);
   }, 110);
+  <script src="player.js"></script>
 }
